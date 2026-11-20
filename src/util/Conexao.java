@@ -11,7 +11,7 @@ public class Conexao {
 
     private static final String USUARIO = "root";
 
-    private static final String SENHA = "SUA_SENHA";
+    private static final String SENHA = "jholgamer379";
 
     public static Connection conectar() {
 
