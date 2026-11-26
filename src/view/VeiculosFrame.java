@@ -28,6 +28,25 @@ public class VeiculosFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        jButton16 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -35,11 +54,123 @@ public class VeiculosFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 590, 440));
 
-        jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
+        jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
+
+        jPanel1.setBackground(new java.awt.Color(51, 0, 0));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(100, 450));
+
+        jButton16.setBackground(new java.awt.Color(102, 0, 0));
+        jButton16.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(255, 255, 255));
+        jButton16.setText("TODAS");
+        jButton16.addActionListener(this::jButton16ActionPerformed);
+        jPanel1.add(jButton16);
+
+        jButton1.setBackground(new java.awt.Color(102, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("AUDI");
+        jPanel1.add(jButton1);
+
+        jButton2.setBackground(new java.awt.Color(102, 0, 0));
+        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("BMW");
+        jPanel1.add(jButton2);
+
+        jButton3.setBackground(new java.awt.Color(102, 0, 0));
+        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("CHEVROLET");
+        jPanel1.add(jButton3);
+
+        jButton4.setBackground(new java.awt.Color(102, 0, 0));
+        jButton4.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("FIAT");
+        jPanel1.add(jButton4);
+
+        jButton5.setBackground(new java.awt.Color(102, 0, 0));
+        jButton5.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("FORD");
+        jButton5.addActionListener(this::jButton5ActionPerformed);
+        jPanel1.add(jButton5);
+
+        jButton6.setBackground(new java.awt.Color(102, 0, 0));
+        jButton6.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("HONDA");
+        jPanel1.add(jButton6);
+
+        jButton7.setBackground(new java.awt.Color(102, 0, 0));
+        jButton7.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("HYUNDAI");
+        jButton7.addActionListener(this::jButton7ActionPerformed);
+        jPanel1.add(jButton7);
+
+        jButton8.setBackground(new java.awt.Color(102, 0, 0));
+        jButton8.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("JEEP");
+        jButton8.addActionListener(this::jButton8ActionPerformed);
+        jPanel1.add(jButton8);
+
+        jButton9.setBackground(new java.awt.Color(102, 0, 0));
+        jButton9.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setText("MITSUBISHI");
+        jPanel1.add(jButton9);
+
+        jButton10.setBackground(new java.awt.Color(102, 0, 0));
+        jButton10.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(255, 255, 255));
+        jButton10.setText("NISSAN");
+        jPanel1.add(jButton10);
+
+        jButton11.setBackground(new java.awt.Color(102, 0, 0));
+        jButton11.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
+        jButton11.setText("PEUGEOT");
+        jPanel1.add(jButton11);
+
+        jButton12.setBackground(new java.awt.Color(102, 0, 0));
+        jButton12.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(255, 255, 255));
+        jButton12.setText("RENAULT");
+        jPanel1.add(jButton12);
+
+        jButton13.setBackground(new java.awt.Color(102, 0, 0));
+        jButton13.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
+        jButton13.setText("SUBARU");
+        jPanel1.add(jButton13);
+
+        jButton14.setBackground(new java.awt.Color(102, 0, 0));
+        jButton14.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton14.setForeground(new java.awt.Color(255, 255, 255));
+        jButton14.setText("TOYOTA");
+        jButton14.addActionListener(this::jButton14ActionPerformed);
+        jPanel1.add(jButton14);
+
+        jButton15.setBackground(new java.awt.Color(102, 0, 0));
+        jButton15.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(255, 255, 255));
+        jButton15.setText("VOLKSWAGEM");
+        jPanel1.add(jButton15);
+
+        jScrollPane1.setViewportView(jPanel1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 110, 400));
+
+        jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Marcas:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -58,6 +189,26 @@ public class VeiculosFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,9 +236,28 @@ public class VeiculosFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
