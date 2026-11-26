@@ -4,21 +4,29 @@
  */
 package view;
 
-/**
- *
- * @author Aluno
- */
-public class PrincipalFrame extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(PrincipalFrame.class.getName());
+import model.Usuario;
 
-    /**
-     * Creates new form PrincipalFrame
-     */
+public class PrincipalFrame extends javax.swing.JFrame {
+
+    private Usuario usuarioLogado;
+
+    private static final java.util.logging.Logger logger =
+            java.util.logging.Logger.getLogger(PrincipalFrame.class.getName());
+
     public PrincipalFrame() {
         initComponents();
     }
 
+    public PrincipalFrame(Usuario usuario) {
+        initComponents();
+        this.usuarioLogado = usuario;
+
+        if (usuarioLogado != null) {
+            jButton9.setText(usuarioLogado.getUsuario());
+        }
+    }
+
+    // O restante do código original continua aqui.
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

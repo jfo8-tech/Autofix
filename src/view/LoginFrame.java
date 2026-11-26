@@ -4,6 +4,11 @@
  */
 package view;
 
+import model.Usuario;
+import service.LoginService;
+import javax.swing.JOptionPane;
+import java.util.Arrays;
+
 /**
  *
  * @author Aluno
@@ -29,16 +34,21 @@ public class LoginFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
+        txtSenha = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtUsuario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtSenha.setBackground(new java.awt.Color(102, 0, 0));
+        txtSenha.setForeground(new java.awt.Color(255, 255, 255));
+        txtSenha.addActionListener(this::txtSenhaActionPerformed);
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 152, 100, 20));
 
         jButton2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 10)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 0, 51));
@@ -53,15 +63,10 @@ public class LoginFrame extends javax.swing.JFrame {
         jButton1.addActionListener(this::jButton1ActionPerformed);
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, -1, -1));
 
-        jTextField2.setBackground(new java.awt.Color(102, 0, 0));
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.addActionListener(this::jTextField2ActionPerformed);
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 112, 100, 20));
-
-        jTextField3.setBackground(new java.awt.Color(102, 0, 0));
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.addActionListener(this::jTextField3ActionPerformed);
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 100, 20));
+        txtUsuario.setBackground(new java.awt.Color(102, 0, 0));
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        txtUsuario.addActionListener(this::txtUsuarioActionPerformed);
+        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 112, 100, 20));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
@@ -72,21 +77,78 @@ public class LoginFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       String usuario = txtUsuario.getText().trim();
+char[] senha = txtSenha.getPassword();
+
+if (usuario.isEmpty() || senha.length == 0) {
+    JOptionPane.showMessageDialog(
+            this,
+            "Preencha o usuário e a senha.",
+            "Atenção",
+            JOptionPane.WARNING_MESSAGE
+    );
+
+    Arrays.fill(senha, '\0');
+    return;
+}
+
+try {
+    LoginService loginService = new LoginService();
+
+    Usuario usuarioAutenticado =
+            loginService.autenticar(usuario, senha);
+
+    if (usuarioAutenticado != null) {
+
+        JOptionPane.showMessageDialog(
+                this,
+                "Login realizado com sucesso!"
+        );
+
+        PrincipalFrame principal =
+                new PrincipalFrame(usuarioAutenticado);
+
+        principal.setLocationRelativeTo(null);
+        principal.setVisible(true);
+
+        this.dispose();
+
+    } else {
+
+        JOptionPane.showMessageDialog(
+                this,
+                "Usuário ou senha incorretos.",
+                "Falha no login",
+                JOptionPane.ERROR_MESSAGE
+        );
+    }
+
+} catch (Exception e) {
+
+    JOptionPane.showMessageDialog(
+            this,
+            "Erro ao realizar login: " + e.getMessage(),
+            "Erro",
+            JOptionPane.ERROR_MESSAGE
+    );
+
+} finally {
+    Arrays.fill(senha, '\0');
+}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,7 +180,7 @@ public class LoginFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JPasswordField txtSenha;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }
