@@ -35,7 +35,6 @@ public class LoginFrame extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         txtSenha = new javax.swing.JPasswordField();
-        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         txtUsuario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -50,18 +49,12 @@ public class LoginFrame extends javax.swing.JFrame {
         txtSenha.addActionListener(this::txtSenhaActionPerformed);
         getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 152, 100, 20));
 
-        jButton2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 10)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(102, 0, 51));
-        jButton2.setText("CRIAR CADASTRO");
-        jButton2.addActionListener(this::jButton2ActionPerformed);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 130, -1));
-
         jButton1.setBackground(new java.awt.Color(102, 0, 0));
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("PROSSEGUIR");
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 220, -1, -1));
 
         txtUsuario.setBackground(new java.awt.Color(102, 0, 0));
         txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,10 +135,6 @@ try {
 }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
@@ -177,7 +166,6 @@ try {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPasswordField txtSenha;

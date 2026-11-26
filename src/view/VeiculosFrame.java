@@ -28,7 +28,11 @@ public class VeiculosFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton17 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jButton16 = new javax.swing.JButton();
@@ -48,19 +52,60 @@ public class VeiculosFrame extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton17.setBackground(new java.awt.Color(102, 0, 0));
+        jButton17.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 12)); // NOI18N
+        jButton17.setForeground(new java.awt.Color(255, 255, 255));
+        jButton17.setText("EDITAR VEÍCULOS");
+        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, -1, -1));
+
+        jScrollPane2.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane2.setForeground(new java.awt.Color(102, 0, 0));
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel2.setForeground(new java.awt.Color(102, 0, 0));
+        jPanel2.setPreferredSize(new java.awt.Dimension(100, 1000));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jTable1.setBackground(new java.awt.Color(102, 0, 0));
+        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "MARCA", "MODELO", "ANO", "CATEGORIA", "QUILOMETRAGEM", "VALOR"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jTable1.setRowHeight(30);
+        jScrollPane3.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane3, java.awt.BorderLayout.CENTER);
+
+        jScrollPane2.setViewportView(jPanel2);
+
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 590, 440));
 
         jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
 
         jPanel1.setBackground(new java.awt.Color(51, 0, 0));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(100, 450));
+        jPanel1.setPreferredSize(new java.awt.Dimension(100, 550));
 
         jButton16.setBackground(new java.awt.Color(102, 0, 0));
         jButton16.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
@@ -165,23 +210,18 @@ public class VeiculosFrame extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 110, 400));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 110, 430));
 
-        jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 3, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Marcas:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Filtros:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 110, 40));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Verdana", 3, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Swis721 Ex BT", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Veículos:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 10, 250, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, 270, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/veiculos.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -244,6 +284,7 @@ public class VeiculosFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -254,10 +295,12 @@ public class VeiculosFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
