@@ -28,6 +28,7 @@ public class VeiculosFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton18 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
@@ -58,11 +59,18 @@ public class VeiculosFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton18.setBackground(new java.awt.Color(102, 0, 0));
+        jButton18.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 12)); // NOI18N
+        jButton18.setForeground(new java.awt.Color(255, 255, 255));
+        jButton18.setText("EDITAR VEÍCULOS");
+        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, -1, -1));
+
         jButton17.setBackground(new java.awt.Color(102, 0, 0));
         jButton17.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 12)); // NOI18N
         jButton17.setForeground(new java.awt.Color(255, 255, 255));
-        jButton17.setText("EDITAR VEÍCULOS");
-        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 470, -1, -1));
+        jButton17.setText("Menu principal");
+        jButton17.addActionListener(this::jButton17ActionPerformed);
+        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 140, -1));
 
         jScrollPane2.setBackground(new java.awt.Color(51, 51, 51));
         jScrollPane2.setForeground(new java.awt.Color(102, 0, 0));
@@ -127,7 +135,7 @@ public class VeiculosFrame extends javax.swing.JFrame {
         jPanel1.add(jButton2);
 
         jButton3.setBackground(new java.awt.Color(102, 0, 0));
-        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("CHEVROLET");
         jPanel1.add(jButton3);
@@ -166,7 +174,7 @@ public class VeiculosFrame extends javax.swing.JFrame {
         jPanel1.add(jButton8);
 
         jButton9.setBackground(new java.awt.Color(102, 0, 0));
-        jButton9.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton9.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("MITSUBISHI");
         jPanel1.add(jButton9);
@@ -203,7 +211,7 @@ public class VeiculosFrame extends javax.swing.JFrame {
         jPanel1.add(jButton14);
 
         jButton15.setBackground(new java.awt.Color(102, 0, 0));
-        jButton15.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jButton15.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton15.setForeground(new java.awt.Color(255, 255, 255));
         jButton15.setText("VOLKSWAGEM");
         jPanel1.add(jButton15);
@@ -250,6 +258,10 @@ public class VeiculosFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
 
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -285,6 +297,7 @@ public class VeiculosFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
