@@ -33,7 +33,6 @@ public class VendaJFrame extends javax.swing.JFrame {
         txtDesconto1 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtValor = new javax.swing.JTextField();
         txtData1 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -44,6 +43,11 @@ public class VendaJFrame extends javax.swing.JFrame {
         cbCliente = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        txtValor1 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,10 +77,6 @@ public class VendaJFrame extends javax.swing.JFrame {
         jLabel8.setText("DESCONTO:");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 230, 110, -1));
 
-        txtValor.setBackground(new java.awt.Color(102, 0, 0));
-        txtValor.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 240, -1));
-
         txtData1.setBackground(new java.awt.Color(102, 0, 0));
         txtData1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(txtData1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 240, -1));
@@ -93,8 +93,8 @@ public class VendaJFrame extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(102, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Dados da Negociação:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 290, -1));
+        jLabel5.setText("Total arrecadado:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, 230, 30));
 
         jLabel4.setBackground(new java.awt.Color(102, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
@@ -127,7 +127,40 @@ public class VendaJFrame extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Menu Principal");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 130, -1, -1));
+
+        jLabel10.setBackground(new java.awt.Color(102, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Dados da Negociação:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 290, -1));
+
+        txtValor1.setBackground(new java.awt.Color(102, 0, 0));
+        txtValor1.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(txtValor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 240, -1));
+
+        jLabel12.setBackground(new java.awt.Color(102, 0, 0));
+        jLabel12.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("00");
+        jLabel12.setOpaque(true);
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 400, 40, 30));
+
+        jLabel14.setBackground(new java.awt.Color(102, 0, 0));
+        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Vendas realizadas:");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 290, 50));
+
+        jLabel15.setBackground(new java.awt.Color(102, 0, 0));
+        jLabel15.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("00");
+        jLabel15.setOpaque(true);
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, 40, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/vendas (1).png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 560));
@@ -142,6 +175,12 @@ public class VendaJFrame extends javax.swing.JFrame {
     private void btnRegistrarVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarVendaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarVendaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        PrincipalFrame tela = new PrincipalFrame();
+tela.setVisible(true);
+this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,6 +213,10 @@ public class VendaJFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbVeiculo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -185,6 +228,6 @@ public class VendaJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtData1;
     private javax.swing.JTextField txtDesconto1;
     private javax.swing.JTextField txtTotal;
-    private javax.swing.JTextField txtValor;
+    private javax.swing.JTextField txtValor1;
     // End of variables declaration//GEN-END:variables
 }

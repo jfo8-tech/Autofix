@@ -28,12 +28,14 @@ public class VeiculosFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         jButton18 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jButton16 = new javax.swing.JButton();
@@ -54,23 +56,31 @@ public class VeiculosFrame extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 3, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("00");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, -1, -1));
+
         jButton18.setBackground(new java.awt.Color(102, 0, 0));
         jButton18.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 12)); // NOI18N
         jButton18.setForeground(new java.awt.Color(255, 255, 255));
         jButton18.setText("EDITAR VEÍCULOS");
-        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, -1, -1));
+        jButton18.addActionListener(this::jButton18ActionPerformed);
+        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 390, -1, -1));
 
         jButton17.setBackground(new java.awt.Color(102, 0, 0));
         jButton17.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 12)); // NOI18N
         jButton17.setForeground(new java.awt.Color(255, 255, 255));
         jButton17.setText("Menu principal");
         jButton17.addActionListener(this::jButton17ActionPerformed);
-        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 140, -1));
+        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, 140, -1));
 
         jScrollPane2.setBackground(new java.awt.Color(51, 51, 51));
         jScrollPane2.setForeground(new java.awt.Color(102, 0, 0));
@@ -105,9 +115,14 @@ public class VeiculosFrame extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane3, java.awt.BorderLayout.CENTER);
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 3, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Quantidade de Veículos em estoque:");
+        jPanel2.add(jLabel5, java.awt.BorderLayout.PAGE_START);
+
         jScrollPane2.setViewportView(jPanel2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 590, 440));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 590, 380));
 
         jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -231,6 +246,16 @@ public class VeiculosFrame extends javax.swing.JFrame {
         jLabel2.setText("Veículos:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, 270, -1));
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 3, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Quantidade de Veículos em estoque:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 470, -1, -1));
+
+        jPanel4.setBackground(new java.awt.Color(102, 0, 0));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, 410, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/veiculos.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 954, -1));
@@ -259,8 +284,16 @@ public class VeiculosFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
+        PrincipalFrame tela = new PrincipalFrame();
+tela.setVisible(true);
+this.dispose();
     }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        CadastroVeiculosFrame tela = new CadastroVeiculosFrame();
+tela.setVisible(true);
+this.dispose();
+    }//GEN-LAST:event_jButton18ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -308,9 +341,13 @@ public class VeiculosFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
